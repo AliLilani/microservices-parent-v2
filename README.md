@@ -209,6 +209,13 @@ curl -X GET -H "Content-Type:application/json" http://localhost:8085/api/invento
 ![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/4.png)
 ![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/5.png)
 ![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/6.png)
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/1.png)
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/NotificationUML1.jpg)
+![alt text](https://github.com/AliLilani/SalesOrderUML.jpg)
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/SalesOrderUML2.jpg)
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/customerUML1.jpg)
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/inventoryUML1.jpg)
+
 
 
 
