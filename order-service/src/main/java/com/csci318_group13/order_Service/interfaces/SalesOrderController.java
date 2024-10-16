@@ -39,8 +39,8 @@ public class SalesOrderController {
 
     }
 
-    @GetMapping("/api/orders/findAllOrdersEceedingAmount/{amount}")
-    public List<SalesOrder> findAllOrdersEceedingAmount(@PathVariable Double amount) {
+    @GetMapping("/api/orders/findAllOrdersExceedingAmount/{amount}")
+    public List<SalesOrder> findAllOrdersExceedingAmount(@PathVariable Double amount) {
 
         return salesOrderQueryService.findAllOrdersExceedingAount(amount) ;
 
