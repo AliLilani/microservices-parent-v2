@@ -22,7 +22,7 @@ public class Vendor implements Serializable {
     }
 
     public void setVendorName(String vendorName) {
-        vendorName = vendorName;
+        this.vendorName = vendorName;
     }
 
     @Override
