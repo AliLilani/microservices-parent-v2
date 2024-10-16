@@ -203,18 +203,20 @@ curl -X GET -H "Content-Type:application/json" http://localhost:8085/api/invento
 - **CQRS** (Command Query Responsibility Segregation) is used for Order and Inventory services to optimize read and write performance.
 
 ## Diagrams
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/1.png) 
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/2.png)
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/3.png)
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/4.png)
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/5.png)
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/6.png)
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/1.png)
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/NotificationUML1.jpg)
-![alt text](https://github.com/AliLilani/SalesOrderUML.jpg)
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/SalesOrderUML2.jpg)
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/customerUML1.jpg)
-![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/inventoryUML1.jpg)
+![Diagram 1](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/1.png) 
+![Diagram 2](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/2.png)
+![Diagram 3](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/3.png)
+![Diagram 4](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/4.png)
+![Diagram 5](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/5.png)
+![Diagram 6](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/6.png)
+![Diagram 7](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/1.png)
+![Diagram 8](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/NotificationUML1.jpg)
+![Diagram 9](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/SalesOrderUML.jpg)
+![Diagram 10](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/SalesOrderUML2.jpg)
+![Diagram 11](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/customerUML1.jpg)
+![Diagram 12](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/inventoryUML1.jpg)
+![Diagram 13](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/inventoryUML2.jpg)
+![Diagram 13](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/umls/productUML1.jpg)
 
 
 
