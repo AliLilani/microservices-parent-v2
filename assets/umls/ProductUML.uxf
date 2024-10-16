@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>40</y>
+      <w>470</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.product_Service.domain.model.aggregate::Product
+--
+~id: Long
+-name: String
+-description: String
+-price: Price
+-vendor: Vendor
+--
+
+
+bg=MAGENTA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>40</y>
+      <w>410</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>domain.model.entity::Vendor
+--
+-vendorName: String
+
+
+
+bg=YELLOW</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>150</y>
+      <w>450</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Price
+--
+-amount: Integer
+
+--
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>270</y>
+      <w>580</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.product_Service.Service::ProductService
+--
+-productRepository: ProductRepository
+-restTemplate: RestTemplate
+--
++ProductService(ProductRepository productRepository, RestTemplate restTemplate): ctor
++getAllProducts(): List&lt;Product&gt;
++getProduct(String id): Product
++addProduct(Product product): Product
++deleteProductByID(String id): void
+--
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>270</y>
+      <w>450</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.csci318_group13.product_Service.Repository::ProductRepository
+--
+--
+--
+
+bg=DARK_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>390</y>
+      <w>440</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.product_Service.Controller::ProductController
+--
+-productService: ProductService
+--
+~ProductController(ProductService productService): ctor
+~allProducts(): List&lt;Product&gt;
+~findProduct(@PathVariable String id): Product
+~createProduct(@RequestBody Product Product): Product
+~deleteEmployee(@PathVariable String id): void
+--
+
+bg=BLUE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>20</x>
+      <y>560</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>valueObject
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>240</x>
+      <y>560</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Aggregate
+
+bg=MAGENTA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>430</x>
+      <y>560</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Repository
+
+bg=DARK_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>620</x>
+      <y>560</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Controller
+bg=BLUE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>840</x>
+      <y>560</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Entity
+bg=YELLOW</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

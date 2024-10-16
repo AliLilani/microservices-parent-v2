@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>30</y>
+      <w>480</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>MyOrderPlacingCommandService
+--
+-salesOrderRepository: SalesOrderRepository
+--
+--
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>120</y>
+      <w>570</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>outboundservices::SalesOrderPlacingPublisherService
+--
+-streamBridge: StreamBridge
+-log = LoggerFactory.getLogger(SalesOrderPlacingPublisherService.class): Logger
+--
+--
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>30</y>
+      <w>500</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>queryServices::SalesOrderQueryService
+--
+-salesOrderRepository: SalesOrderRepository
+--
+--
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>260</y>
+      <w>450</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.order_Service.interfaces::SalesOrderController
+--
+-orderService: OrderService
+-myOrderPlacingCommandService: MyOrderPlacingCommandService
+-salesOrderQueryService: SalesOrderQueryService
+--
+--
+
+bg=BLUE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>240</y>
+      <w>440</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.order_Service.DTO::MySalesOrderResource
+--
+-customerId: Long
+-productIds: List&lt;Long&gt;
+-salesOrderDate: SalesOrderDate
+-salesOrderTotalAmount: SalesOrderTotalAmount
+--
+--
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>420</y>
+      <w>460</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.csci318_group13.order_Service.repository::SalesOrderRepository
+--
+--
+--
+
+bg=DARK_GRAY
+fg=RED</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>160</x>
+      <y>530</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Services
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>360</x>
+      <y>530</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Controller
+bg=BLUE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>580</x>
+      <y>530</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ResourceDTO
+
+
+bg=GREEN
+fg=BLACK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>830</x>
+      <y>530</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Repository
+
+bg=DARK_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

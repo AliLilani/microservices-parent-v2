@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>32</y>
+      <w>552</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>ProductServiceCheckingService
+--
+-log = LoggerFactory.getLogger(OrderPlacedEventHandler.class): Logger
+-restTemplate: RestTemplate
+--
++ProductServiceCheckingService(RestTemplate restTemplate): ctor
++CheckProductsExixt(List&lt;Long&gt; productIds): boolean
+--
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>152</y>
+      <w>552</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.Inventory_Service.application.outboundservices::InventoryApprovalPublishingService
+--
+-streamBridge: StreamBridge
+-log = LoggerFactory.getLogger(InventoryApprovalPublishingService.class): Logger
+--
++InventoryApprovalPublishingService(StreamBridge streamBridge): ctor
++handleOrderInitiatedEvent(OrderApprovalStatusEvent orderApprovalStatusEvent): void
+--
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>256</y>
+      <w>464</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.Inventory_Service.application.queryservices::InventoryQueryService
+--
+-inventoryRepository: InventoryRepository
+-log = LoggerFactory.getLogger(InventoryQueryService.class): org.slf4j.Logger
+--
++InventoryQueryService(InventoryRepository inventoryRepository): ctor
++findAllInventoryItems(): List&lt;InventoryItem&gt;
++findInventoryItemByProductId(Long id): List&lt;InventoryItem&gt;
++isExpired(List&lt;Long&gt; ids): Boolean
++updateInventoryItemsStock(List&lt;Long&gt; productIds): void
++isAvailable(List&lt;Long&gt; productIds): boolean
+--
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>104</x>
+      <y>544</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Services
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>704</x>
+      <y>64</y>
+      <w>248</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;InventoryRepository
+--
+--
++findByProductId(Long id): List&lt;InventoryItem&gt;
+--
+
+bg=DARK_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>232</x>
+      <y>544</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Repository
+
+bg=DARK_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>168</y>
+      <w>216</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>rest.dto::InventoryResource
+--
+-productId: Long
+-location: Location
+-stock: Stock
+-expiryDate: Expiry
+
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>416</y>
+      <w>696</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>InventoryController
+--
+~addInventoryCommandService: AddInventoryCommandService
+~inventoryQueryService: InventoryQueryService
+--
++InventoryController(AddInventoryCommandService addInventoryCommandService, InventoryQueryService inventoryQueryService): ctor
++addInventory(@RequestBody InventoryResource inventoryResource): ResponseEntity&lt;InventoryItem&gt;
++findAllItems(): List&lt;InventoryItem&gt;
+--
+
+bg=BLUE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>384</x>
+      <y>544</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Controller
+bg=BLUE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>560</x>
+      <y>544</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>ResourceDTO
+
+
+bg=GREEN
+fg=BLACK</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

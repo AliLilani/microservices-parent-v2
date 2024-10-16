@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>30</x>
+      <y>350</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Command
+bg=CYAN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>250</x>
+      <y>350</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>valueObject
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>450</x>
+      <y>350</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Aggregate
+
+bg=MAGENTA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>700</x>
+      <y>350</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Entity
+
+bg=YELLOW</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>20</y>
+      <w>330</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>model.valueobjects::Expiry
+--
+-expiryDate: LocalDate
+
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>100</y>
+      <w>300</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>model.valueobjects::Location
+--
+-warehouse: String
+-aisle: String
+-shelf: String
+
+
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>200</y>
+      <w>380</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>model.valueobjects::Stock
+--
+-stockQuantity: Integer
+
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>200</y>
+      <w>380</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>model.commands::AddInventoryItemCommand
+--
+-productId: Long
+-location: Location
+-stock: Stock
+-expiryDate: Expiry
+
+
+
+
+bg=CYAN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>10</y>
+      <w>530</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>model.aggregate::InventoryItem
+--
+-id: Long
+-productId: Long
+-location: Location
+-stock: Stock
+-expiry: Expiry
+--
+
++InventoryItem(Long id, Long productId, Location location, Stock stock, Expiry expiry): ctor
++InventoryItem(AddInventoryItemCommand addInventoryItemCommand): ctor
+
+--
+
+bg=MAGENTA</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

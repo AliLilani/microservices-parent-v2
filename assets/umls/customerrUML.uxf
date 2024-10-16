@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>20</y>
+      <w>500</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.customer_Service.domain.model.aggregate::Customer
+--
+~id: Long
+-fName: String
+-lName: String
+-contactInfo: ContactInfo
+
+
+bg=MAGENTA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>30</y>
+      <w>480</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>:ContactInfo
+--
+-email: String
+-phone: String
+-address: String
+
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>260</x>
+      <y>550</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Aggregate
+
+bg=MAGENTA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>40</x>
+      <y>550</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>valueObject
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>150</y>
+      <w>610</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.customer_Service.service::CustomerService
+--
+-customerRepository: CustomerRepository
+-restTemplate: RestTemplate
+--
++CustomerService(CustomerRepository customerRepository, RestTemplate restTemplate): ctor
++getAllCustomers(): List&lt;Customer&gt;
++getCustomer(String id): Customer
++saveCustomer(Customer customer): Customer
++deleteCustomerByID(String id): void
++updateCustomer(Customer customer): void
+--
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>350</y>
+      <w>650</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.customer_Service.controller::CustomerController
+--
+-customerService: CustomerService
+--
+~CustomerController(CustomerService customerService): ctor
+~customerServiceallCustomers(): List&lt;CustomerDTO&gt;
+~findCustomer(@PathVariable String id): CustomerDTO
+~addCustomer(@RequestBody CustomerDTO customerDTO): Customer
+~updateCustomer(@RequestBody CustomerDTO customerDTO, @PathVariable String id): Customer
+~deleteEmployee(@PathVariable String id): void
+--
+
+bg=BLUE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>390</y>
+      <w>400</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+CustomerRepository
+--
+
+
+fg=DARK_GRAY
+bg=DARK_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>450</x>
+      <y>550</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Repository
+
+bg=DARK_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>640</x>
+      <y>550</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Controller
+bg=BLUE</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

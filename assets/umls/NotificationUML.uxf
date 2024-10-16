@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>40</y>
+      <w>970</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.Notification_Service.application::OrderApprovedEventHandler
+--
+-log = LoggerFactory.getLogger(OrderApprovedEventHandler.class): Logger
+-restTemplate: RestTemplate
+-queryOrderService: QueryOrderService
+-queryCustomerService: QueryCustomerService
+--
++OrderApprovedEventHandler(RestTemplate restTemplate, QueryOrderService queryOrderService, QueryCustomerService queryCustomerService): ctor
++consume(): Consumer&lt;OrderApprovalStatusEvent&gt;
+-sendEmailToCustomer(String email, Boolean approvalStatus, String placingOrderId): void
+--
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>400</y>
+      <w>650</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.Notification_Service.application.outboundServices.rest::QueryCustomerService
+--
+-log = LoggerFactory.getLogger(QueryOrderService.class): Logger
+-restTemplate: RestTemplate
+--
++QueryCustomerService(RestTemplate restTemplate): ctor
++findCustomerByID(Long customerId): CustomerDTO
+--
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>240</y>
+      <w>630</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>com.csci318_group13.Notification_Service.application.outboundServices.rest::QueryOrderService
+--
+-log = LoggerFactory.getLogger(QueryOrderService.class): Logger
+-restTemplate: RestTemplate
+--
++QueryOrderService(RestTemplate restTemplate): ctor
++findOrder(String placingOrderID): MySalesOrderResource
+--
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>40</x>
+      <y>550</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Services
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>610</x>
+      <y>550</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Event handler
+
+
+
+bg=GREEN
+fg=BLACK</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
