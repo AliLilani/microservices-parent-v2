@@ -161,7 +161,7 @@ curl -X GET -H "Content-Type:application/json" http://localhost:8085/api/invento
 
 Linux/MacOS
 ```bash
-curl -X POST -H "Content-Type:application/json" -d "{"customerId":4,"productIds" : [1 ,2],"salesOrderDate" :{"orderDate": "2023-09-24"},"salesOrderTotalAmount" : {"salesOrderTotalAmount": 2000}} localhost:8081/api/orders/placeOrder
+curl -X POST -H "Content-Type:application/json" -d "{"customerId":4,"productIds" : [1 ,2],"salesOrderDate" :{"orderDate": "2023-09-24"},"salesOrderTotalAmount" : {"salesOrderTotalAmount": 2000}} http://localhost:8081/api/orders/placeOrder
 ```
 Windows (Run in cmd not powershell)
 ``` cmd
@@ -203,6 +203,16 @@ curl -X GET -H "Content-Type:application/json" http://localhost:8085/api/invento
 - **CQRS** (Command Query Responsibility Segregation) is used for Order and Inventory services to optimize read and write performance.
 
 ## Diagrams
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/1.png) 
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/2.png)
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/3.png)
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/4.png)
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/5.png)
+![alt text](https://github.com/AliLilani/microservices-parent-v2/blob/main/assets/6.png)
+
+
+
+
 
 
 
