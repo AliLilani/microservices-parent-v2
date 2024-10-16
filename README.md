@@ -1,6 +1,6 @@
 # E-Commerce Microservice Application
 
-##CSCI318 Group 13
+### CSCI318 Group 13
 
 ## Overview
 
@@ -130,6 +130,70 @@ curl -X GET -H "Content-Type:application/json" http://localhost:8083/api/product
 Linux/MacOS and Windows(cmd)
 ```
 curl -X GET -H "Content-Type:application/json" http://localhost:8083/api/products
+```
+
+**Delete a Product**
+
+Linux/MacOS and Windows(cmd)
+```
+curl -X GET -H "Content-Type:application/json" http://localhost:8083/api/products/delete/2
+```
+
+**Stock Inventory Item**
+
+Linux/MacOS
+```bash
+curl -X POST -H "Content-Type:application/json" -d "{"productId": 2,"location": {"warehouse": "A","aisle": "L","shelf": "5"},"stock": {"stockQuantity": 10},"expiryDate": {"expiryDate": "2030-09-24"}}" http://localhost:8085/api/inventory/addItem
+```
+Windows (Run in cmd not powershell)
+``` cmd
+curl -X POST -H "Content-Type:application/json" -d "{\"productId\": 2,\"location\": {\"warehouse\": \"A\",\"aisle\": \"L\",\"shelf\": \"5\"},\"stock\": {\"stockQuantity\": 10},\"expiryDate\": {\"expiryDate\": \"2030-09-24\"}}" http://localhost:8085/api/inventory/addItem
+```
+
+**Find All Items in Inventory**
+
+Linux/MacOS and Windows(cmd)
+```
+curl -X GET -H "Content-Type:application/json" http://localhost:8085/api/inventory/findAllItems
+```
+
+**Place an Order**
+
+Linux/MacOS
+```bash
+curl -X POST -H "Content-Type:application/json" -d "{"customerId":4,"productIds" : [1 ,2],"salesOrderDate" :{"orderDate": "2023-09-24"},"salesOrderTotalAmount" : {"salesOrderTotalAmount": 2000}} localhost:8081/api/orders/placeOrder
+```
+Windows (Run in cmd not powershell)
+``` cmd
+curl -X POST -H "Content-Type:application/json" -d "{\"customerId\":4,\"productIds\" : [1 ,2],\"salesOrderDate\" :{\"orderDate\": \"2023-09-24\"},\"salesOrderTotalAmount\" : {\"salesOrderTotalAmount\": 2000}}" http://localhost:8081/api/orders/placeOrder
+```
+
+**Query Order By placingOrderID**
+
+Linux/MacOS and Windows(cmd)
+```
+curl -X GET -H "Content-Type:application/json" http://localhost:8081/api/orders/placingID/{id generated from previous command} 
+```
+
+**Find all orders placed by certain CustomerID**
+
+Linux/MacOS and Windows(cmd)
+```
+curl -X GET -H "Content-Type:application/json" http://localhost:8081/api/orders/findAllOrdersByCustomer/4
+```
+
+**Find all orders exceeding certain total amount**
+
+Linux/MacOS and Windows(cmd)
+```
+curl -X GET -H "Content-Type:application/json" http://localhost:8081/api/orders/findAllOrdersExceedingAmount/900
+```
+
+**Find all Items in Inventory Below Certain stock quantity**
+
+Linux/MacOS and Windows(cmd)
+```
+curl -X GET -H "Content-Type:application/json" http://localhost:8085/api/inventory/findItemsBelowStockLevel/100
 ```
 
 ## Architecture
