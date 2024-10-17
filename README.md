@@ -136,7 +136,7 @@ curl -X GET -H "Content-Type:application/json" http://localhost:8083/api/product
 
 Linux/MacOS and Windows(cmd)
 ```
-curl -X GET -H "Content-Type:application/json" http://localhost:8083/api/products/delete/2
+curl -X GET -H "Content-Type:application/json" http://localhost:8083/api/product/delete/2
 ```
 
 **Stock Inventory Item**
