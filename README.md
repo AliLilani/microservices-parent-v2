@@ -111,11 +111,11 @@ curl -X DELETE http://localhost:8084/customer/delete/1
 
 Linux/MacOS
 ```bash
-curl -X POST -H "Content-Type:application/json" -d "{"name": "mac pro4","description": "lab","price": {"amount": 1000},"vendor": {"vendorName" :"Apple"}}" http://localhost:8083/api/addProduct
+curl -X POST -H "Content-Type:application/json" -d "{"name": "mac pro4","description": "lab","price": {"amount": 1000},"vendor": {"vendorName" :"Apple"}}" http://localhost:8083/api/product/addProduct
 ```
 Windows (Run in cmd not powershell)
 ``` cmd
-curl -X POST -H "Content-Type:application/json" -d "{\"name\": \"mac pro4\",\"description\": \"lab\",\"price\": {\"amount\": 1000},\"vendor\": {\"vendorName\" :\"Apple\"}}" http://localhost:8083/api/addProduct
+curl -X POST -H "Content-Type:application/json" -d "{\"name\": \"mac pro4\",\"description\": \"lab\",\"price\": {\"amount\": 1000},\"vendor\": {\"vendorName\" :\"Apple\"}}" http://localhost:8083/api/product/addProduct
 ```
 
 **Query Product By ID**
