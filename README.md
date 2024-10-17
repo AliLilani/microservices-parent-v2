@@ -5,7 +5,7 @@
 ## Overview
 
 The e-commerce application consists of five microservices (Customer, Product, Inventory, Order,
-and Notification) that support a variety of use cases. Below are 12 use cases that highlight the core
+and Notification) that support a variety of use cases. Below are use cases that highlight the core
 functionalities of the system, including three that require inter-service communication and two that
 involve real-time streaming data processing.
 
