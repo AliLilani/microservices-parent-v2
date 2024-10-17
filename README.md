@@ -161,7 +161,7 @@ curl -X GET -H "Content-Type:application/json" http://localhost:8085/api/invento
 
 Linux/MacOS
 ```bash
-curl -X POST -H "Content-Type:application/json" -d "{"customerId":4,"productIds" : [1 ,2],"salesOrderDate" :{"orderDate": "2023-09-24"},"salesOrderTotalAmount" : {"salesOrderTotalAmount": 2000}} http://localhost:8081/api/orders/placeOrder
+curl -X POST -H "Content-Type:application/json" -d "{"customerId":4,"productIds" : [1 ,2],"salesOrderDate" :{"orderDate": "2023-09-24"},"salesOrderTotalAmount" : {"salesOrderTotalAmount": 2000}}" http://localhost:8081/api/orders/placeOrder
 ```
 Windows (Run in cmd not powershell)
 ``` cmd
